@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ubuntu:18.04
+ARG BASE_IMAGE=ubuntu:20.04
 #Download base image ubuntu 20.04
 FROM $BASE_IMAGE
 
@@ -68,6 +68,7 @@ RUN sudo apt-get install --yes \
     python3-dev \
     python3-numpy \
     python3-setuptools \
+    python3-pip \
     openjdk-8-jdk \
     libpcre3 \
     libpcre3-dev \
@@ -149,6 +150,9 @@ RUN mkdir -p ~/opensim-workspace/opensim-core-source/build && \
       -DWITH_EZC3D=ON &&\
     make -j$BUILD_CORES && \
     make install
+
+RUN cd /opt/opensim-gui/sdk/Python && \
+    sudo python3 setup.py install
 
 RUN echo "export USER='$(whoami)'" >> ~/.bashrc
 
