@@ -147,11 +147,11 @@ RUN mkdir -p ~/opensim-workspace/opensim-core-source/build && \
       -DSWIG_DIR=~/swig/share/swig \
       -DSWIG_EXECUTABLE=~/swig/bin/swig/ \
       -DWITH_BTK=OFF \
-      -DWITH_EZC3D=ON &&\
+      -DWITH_EZC3D=ON && \
     make -j$BUILD_CORES && \
     make install
 
-RUN cd ~/opensim-core/sdk/Python %% \
+RUN cd ~/opensim-core/sdk/Python && \
     sudo python3 setup.py install
 
 RUN echo "export USER='$(whoami)'" >> ~/.bashrc
