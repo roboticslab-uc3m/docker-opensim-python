@@ -77,7 +77,7 @@ RUN sudo apt-get install --yes \
     libtool \
     software-properties-common \
     wget && \
-    sudo pip3 install numpy==1.18.5
+    sudo pip3 install numpy==1.20.3
 
 # Missind Dependencies
 RUN sudo apt-get install -y --fix-missing \
