@@ -154,6 +154,11 @@ RUN mkdir -p ~/opensim-workspace/opensim-core-source/build && \
 RUN cd ~/opensim-core/sdk/Python && \
     sudo python3 setup.py install
 
+RUN sudo mkdir -p /opt/opensim && \
+    sudo chown $(whoami):$(whoami) /opt/opensim && \
+    cp -r ~/opensim-core /opt/opensim && \
+    cp -r ~/opensim-workspace/opensim-core-dependencies /opt/opensim
+
 RUN echo "export USER='$(whoami)'" >> ~/.bashrc
 
 # Install dependencies that support WebGL https://stackoverflow.com/questions/69351416/docker-webgl-headless-chrome-error-passthrough-is-not-supported-gl-is-disa
