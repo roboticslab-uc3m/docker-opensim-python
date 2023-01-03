@@ -66,7 +66,6 @@ RUN sudo apt-get install --yes \
     doxygen \
     python3 \
     python3-dev \
-    python3-numpy \
     python3-setuptools \
     python3-pip \
     openjdk-8-jdk \
@@ -77,7 +76,8 @@ RUN sudo apt-get install --yes \
     gfortran \
     libtool \
     software-properties-common \
-    wget
+    wget && \
+    sudo pip3 install numpy==1.18.5
 
 # Missind Dependencies
 RUN sudo apt-get install -y --fix-missing \
