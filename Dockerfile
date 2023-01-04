@@ -6,7 +6,7 @@ FROM $BASE_IMAGE
 # Dockerfile info
 LABEL authors="jcgvicto@ing.uc3m.es, monte.igna@gmail.com"
 LABEL version="0.1"
-LABEL description="Docker image to run CI for iiwa-fri-gym."
+LABEL description="Docker image to use opensim Python bindings."
 
 RUN apt-get update
 
