@@ -9,7 +9,7 @@ docker compose build # docker-compose in older versions
 ## Run
 
 ```bash
-docker compose up # docker-compose in older versions
+docker compose run --rm opensim # docker-compose in older versions
 ```
 
 ## Options
