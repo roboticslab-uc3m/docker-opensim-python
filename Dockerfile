@@ -102,12 +102,6 @@ RUN mkdir -p ~/opensim-workspace/swig-source && cd ~/opensim-workspace/swig-sour
     sh autogen.sh && ./configure --prefix=$HOME/swig --disable-ccache && \
     make && make -j$BUILD_CORES install
 
-# Download and install NetBeans 12.3.
-RUN mkdir -p ~/opensim-workspace/Netbeans12.3 && cd ~/opensim-workspace/Netbeans12.3 && \
-    wget -q https://archive.apache.org/dist/netbeans/netbeans/12.3/Apache-NetBeans-12.3-bin-linux-x64.sh && \
-    chmod 755 Apache-NetBeans-12.3-bin-linux-x64.sh && \
-    ./Apache-NetBeans-12.3-bin-linux-x64.sh --silent
-
 # Get opensim-core.
 RUN git clone https://github.com/opensim-org/opensim-core.git ~/opensim-workspace/opensim-core-source && \
     cd ~/opensim-workspace/opensim-core-source && \
