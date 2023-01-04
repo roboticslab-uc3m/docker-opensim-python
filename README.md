@@ -6,16 +6,22 @@
 docker compose build # docker-compose in older versions
 ```
 
-## Run
+## Or (instead) download the image
 
 ```bash
-docker compose run --rm opensim # docker-compose in older versions
+docker pull ghcr.io/roboticslab-uc3m/opensim-python:latest
 ```
 
-## Options
+## Additional configuration
 
 `docker-compose.yaml` adding more `volumes`:
 
 ```yaml
     - /path/in/local:/path/in/docker
+```
+
+## Run
+
+```bash
+docker compose run --rm opensim # docker-compose in older versions
 ```
