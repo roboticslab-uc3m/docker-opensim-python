@@ -47,17 +47,12 @@ Once you have [Rocker](https://robots.uc3m.es/installation-guides/install-docker
 - For NVIDIA:
 
 ```bash
-rocker --home --user --nvidia --x11 --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
+rocker --home --user --nvidia --x11 -e LD_LIBRARY_PATH=/opt/opensim/opensim-core/sdk/lib:/opt/opensim/opensim-core-dependencies/simbody/lib --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
 ```
 
 - For intel integrated graphics support:
 
 ```bash
-rocker --home --user --devices /dev/dri/card0 --x11 --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
-```
-
-Inside rocker, you'll probably need:
-
-```bash
-export LD_LIBRARY_PATH=/opt/opensim/opensim-core/sdk/lib:/opt/opensim/opensim-core-dependencies/simbody/lib
+rocker --home --user --devices /dev/dri/card0 --x11 -e LD_LIBRARY_PATH=/opt/opensim/opensim-core/sdk/lib:/opt/opensim/opensim-core-dependencies/simbody/lib
+ --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
 ```
