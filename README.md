@@ -16,6 +16,8 @@ docker compose build # docker-compose in older versions
 docker pull ghcr.io/roboticslab-uc3m/opensim-python:latest
 ```
 
+Once downloaded, upon `docker image ls` you'll see `ghcr.io/roboticslab-uc3m/opensim-python`.
+
 ## Additional configuration
 
 `docker-compose.yaml` adding more `volumes`:
