@@ -40,7 +40,7 @@ Extra configuration options were also commented at [roboticslab-uc3m/gymnasium-o
 docker compose run --rm opensim # docker-compose in older versions
 ```
 
-### Run via Rocker
+### Or (instead) run via Rocker
 
 Once you have [Rocker](https://robots.uc3m.es/installation-guides/install-docker.html#rocker), and suppose the image name `ghcr.io/roboticslab-uc3m/opensim-python`; then, similar to [this](http://wiki.ros.org/Robots/TIAGo/melodic_install):
 
