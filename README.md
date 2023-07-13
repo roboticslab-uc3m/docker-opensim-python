@@ -55,3 +55,9 @@ rocker --home --user --nvidia --x11 --privileged ghcr.io/roboticslab-uc3m/opensi
 ```bash
 rocker --home --user --devices /dev/dri/card0 --x11 --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
 ```
+
+Inside rocker, you'll probably need:
+
+```bash
+export LD_LIBRARY_PATH=/opt/opensim/opensim-core/sdk/lib:/opt/opensim/opensim-core-dependencies/simbody/lib
+```
