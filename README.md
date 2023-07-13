@@ -1,6 +1,8 @@
 # docker-opensim-python
 
-First install [Docker](https://robots.uc3m.es/installation-guides/install-docker.html).
+First install:
+
+- [Docker](https://robots.uc3m.es/installation-guides/install-docker.html)
 
 ## Build the image
 
