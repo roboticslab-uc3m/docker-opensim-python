@@ -12,6 +12,8 @@ First install:
 docker compose build # docker-compose in older versions
 ```
 
+Once built, upon `docker image ls` you'll see `opensim-python`.
+
 ### Or (instead) downloading the image via Docker Pull
 
 ```bash
