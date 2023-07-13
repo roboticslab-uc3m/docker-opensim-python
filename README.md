@@ -20,9 +20,11 @@ docker pull ghcr.io/roboticslab-uc3m/opensim-python:latest
 
 Once downloaded, upon `docker image ls` you'll see `ghcr.io/roboticslab-uc3m/opensim-python`.
 
-## Run via Docker Compose
+## Run
 
-### Configure Docker Compose
+### Run via Docker Compose
+
+#### Configure Docker Compose
 
 You can edit `docker-compose.yaml` adding more `volumes`:
 
@@ -32,8 +34,24 @@ You can edit `docker-compose.yaml` adding more `volumes`:
 
 Extra configuration options were also commented at [roboticslab-uc3m/gymnasium-opensim/issues/2](https://github.com/roboticslab-uc3m/gymnasium-opensim/issues/2).
 
-## Actually run via Docker Compose
+#### Actually run via Docker Compose
 
 ```bash
 docker compose run --rm opensim # docker-compose in older versions
+```
+
+### Run via Rocker
+
+Once you have [Rocker](https://robots.uc3m.es/installation-guides/install-docker.html#rocker), and suppose the image name `ghcr.io/roboticslab-uc3m/opensim-python`; then, similar to [this](http://wiki.ros.org/Robots/TIAGo/melodic_install):
+
+- For NVIDIA:
+
+```bash
+rocker --home --user --nvidia --x11 --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
+```
+
+- For intel integrated graphics support:
+
+```bash
+rocker --home --user --devices /dev/dri/card0 --x11 --privileged ghcr.io/roboticslab-uc3m/opensim-python /bin/bash
 ```
