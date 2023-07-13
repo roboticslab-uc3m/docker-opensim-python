@@ -30,6 +30,8 @@ You can edit `docker-compose.yaml` adding more `volumes`:
     - /path/in/local:/path/in/docker
 ```
 
+Extra configuration options were also commented at [roboticslab-uc3m/gymnasium-opensim/issues/2](https://github.com/roboticslab-uc3m/gymnasium-opensim/issues/2).
+
 ## Actually run via Docker Compose
 
 ```bash
